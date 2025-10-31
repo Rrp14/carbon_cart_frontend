@@ -37,9 +37,9 @@ function App() {
   };
 
   const toggleProductSelection = (productId: string) => {
-    setSelectedProducts(prev => 
+    setSelectedProducts((prev: string[]) => 
       prev.includes(productId)
-        ? prev.filter(id => id !== productId)
+        ? prev.filter((id: string) => id !== productId)
         : [...prev, productId]
     );
   };
